@@ -1,9 +1,3 @@
-/* =============================================
-   APEX GYM COACH — main.js
-   Features: Navbar scroll, Mobile menu,
-   FAQ accordion, Scroll reveal, EmailJS contact
-   ============================================= */
-
 document.addEventListener('DOMContentLoaded', () => {
 
   /* =====================
@@ -115,14 +109,9 @@ document.addEventListener('DOMContentLoaded', () => {
      6. EMAILJS CONTACT FORM
   ===================== */
 
-  // ⚠️  IMPORTANT: Replace the values below with your actual EmailJS credentials:
-  //   - YOUR_PUBLIC_KEY  → From EmailJS Dashboard → Account → Public Key
-  //   - YOUR_SERVICE_ID  → From EmailJS Dashboard → Email Services
-  //   - YOUR_TEMPLATE_ID → From EmailJS Dashboard → Email Templates
-
-  const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
-  const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
-  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+  const EMAILJS_PUBLIC_KEY  = 'ccMNxZpGD7S987cw5';
+  const EMAILJS_SERVICE_ID  = 'service_ztvi0kv';
+  const EMAILJS_TEMPLATE_ID = 'template_gvzq0m3';
 
   // Init EmailJS
   if (typeof emailjs !== 'undefined') {
@@ -168,6 +157,12 @@ document.addEventListener('DOMContentLoaded', () => {
       contactForm.style.display = 'none';
       formSuccess.classList.add('show');
 
+      setTimeout(() => {
+        formSuccess.classList.remove('show');
+        contactForm.style.display = 'block';
+        contactForm.reset();
+      }, 10000);
+
     } catch (err) {
       console.error('EmailJS Error:', err);
 
@@ -175,8 +170,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (formError) {
         formError.style.display = 'block';
         formError.textContent = err.message?.includes('EmailJS not loaded')
-          ? '⚠️ EmailJS not configured yet. Please add your EmailJS credentials in main.js.'
-          : '❌ Something went wrong. Please try again or contact directly via WhatsApp.';
+            ? '⚠️ EmailJS not configured yet. Please add your EmailJS credentials in main.js.'
+            : '❌ Something went wrong. Please try again or contact directly via WhatsApp.';
       }
 
       // Reset button
