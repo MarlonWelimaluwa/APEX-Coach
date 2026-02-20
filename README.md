@@ -1,183 +1,114 @@
-# APEX Gym Coach — Landing Page
+# APEX Coach — Personal Gym Coaching Landing Page
 
-A fully mobile-responsive, modern landing page for a solo gym coach.
-**Theme:** Deep Red + Charcoal | **Stack:** HTML, CSS (custom), Tailwind-ready, Vanilla JS + EmailJS
-
----
-
-## 📁 File Structure
-
-```
-gym-coach/
-├── index.html          ← Main landing page (all sections)
-├── css/
-│   └── style.css       ← All styles, animations, responsive layout
-├── js/
-│   └── main.js         ← Navbar, mobile menu, FAQ, scroll reveal, EmailJS
-├── images/             ← (Create this folder — add your photos here)
-│   ├── coach-hero.jpg
-│   ├── coach-about.jpg
-│   ├── transform-1-before.jpg
-│   ├── transform-1-after.jpg
-│   └── ...
-└── README.md           ← This file
-```
+A clean, fully responsive personal gym coaching landing page built with pure HTML, CSS, and JavaScript. Designed to convert visitors into clients with a bold dark aesthetic, smooth animations, and a fully functional contact form.
 
 ---
 
-## ⚡ Quick Start
+## 🔥 Live Demo
 
-1. **Open `index.html`** in a browser — it works without any server.
-2. **Add your images** — see the Image Setup section below.
-3. **Connect EmailJS** — see the EmailJS Setup section below.
-4. **Customise content** — names, prices, descriptions are all clearly labelled in `index.html`.
+> _Add your live site link here_
 
 ---
 
-## 📧 EmailJS Setup (Contact Form)
 
-The contact form uses [EmailJS](https://www.emailjs.com/) — **free up to 200 emails/month, no backend needed.**
+## ✨ Features
 
-### Step 1 — Create EmailJS Account
-1. Go to [emailjs.com](https://www.emailjs.com/) and sign up (free)
-2. Go to **Email Services** → Add New Service → Connect your Gmail or any email
+- **Fully Responsive** — works seamlessly on mobile, tablet, and desktop
+- **Mobile Hamburger Menu** — smooth full-screen mobile navigation
+- **Scroll Reveal Animations** — elements animate in as you scroll
+- **Scroll Spy** — active nav link updates based on section in view
+- **FAQ Accordion** — clean expandable FAQ section
+- **EmailJS Contact Form** — real email delivery without a backend
+- **Success / Error States** — form feedback with auto-reset after submission
+- **Smooth Anchor Scrolling** — with fixed navbar offset
+- **Auto Year Update** — footer year updates automatically
 
-### Step 2 — Create an Email Template
-1. Go to **Email Templates** → Create New Template
-2. Use these template variables (they match the form fields):
+---
 
+## 📄 Sections
+
+1. **Hero** — Bold headline, CTA buttons, client rating badge
+2. **About** — Coach background, experience badge, certifications
+3. **Services** — Coaching packages overview
+4. **Transformations** — Client before/after results
+5. **Testimonials** — Client reviews
+6. **Pricing** — Tiered pricing cards with a featured plan
+7. **FAQ** — Common questions accordion
+8. **Contact** — EmailJS powered enquiry form
+9. **Footer** — Links, socials, copyright
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Usage |
+|---|---|
+| HTML5 | Structure |
+| CSS3 | Styling, animations, responsive layout |
+| Vanilla JavaScript | Interactions, scroll effects, form handling |
+| [EmailJS](https://emailjs.com) | Contact form email delivery |
+| Google Fonts | Bebas Neue, Syne, DM Sans |
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/apex-coach.git
+cd apex-coach
 ```
-From: {{from_name}} <{{from_email}}>
-Subject: New Coaching Enquiry from {{from_name}}
 
-Name:    {{from_name}}
-Email:   {{from_email}}
-Phone:   {{phone}}
-Goal:    {{goal}}
-Message: {{message}}
+### 2. Open the project
+
+Just open `index.html` in your browser. No build tools or dependencies needed.
+
+```bash
+open index.html
 ```
 
-### Step 3 — Get Your Credentials
-From your EmailJS dashboard, collect:
-- **Public Key** → Account → General → Public Key
-- **Service ID** → Email Services → your service ID
-- **Template ID** → Email Templates → your template ID
+---
 
-### Step 4 — Add Credentials to main.js
-Open `js/main.js` and replace these 3 lines near the top of section 6:
+## 📧 EmailJS Setup
+
+This project uses [EmailJS](https://emailjs.com) to send contact form submissions directly to your email — no backend required.
+
+### Steps:
+
+1. Sign up at [emailjs.com](https://emailjs.com)
+2. Go to **Email Services** → Add your Gmail or preferred email provider
+3. Go to **Email Templates** → Create a template using these variables:
+   - `{{from_name}}` — sender's name
+   - `{{from_email}}` — sender's email
+   - `{{phone}}` — sender's phone number
+   - `{{goal}}` — sender's fitness goal
+   - `{{message}}` — sender's message
+4. Go to **Account** → copy your **Public Key**
+5. Open `main.js` and update these three lines:
 
 ```js
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // ← Replace
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // ← Replace
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // ← Replace
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
 ```
 
-That's it — the form will now send emails directly to your inbox! ✅
+> ⚠️ Make sure all three values are wrapped in quotes.
 
 ---
 
-## 🖼 Image Setup
+## 📁 Project Structure
 
-The site uses placeholder boxes wherever images are expected.
-To replace them, open `index.html` and search for the comments like:
-
-```html
-<!-- Replace with: <img src="images/coach-hero.jpg" alt="Coach Name" ...> -->
+```
+apex-coach/
+├── index.html       # Main HTML file
+├── style.css        # All styles and responsive design
+├── main.js          # All JavaScript functionality
+└── README.md        # Project documentation
 ```
 
-Simply swap the placeholder `<div>` with the `<img>` tag shown in the comment.
-
-### Recommended image sizes:
-| Image | Size | Aspect Ratio |
-|-------|------|-------------|
-| Hero coach photo | 600×800px | 3:4 |
-| About coach photo | 600×750px | 4:5 |
-| Transformation before/after | 400×533px each | 3:4 |
-
-### Image optimisation tips:
-- Use `.webp` format for best performance
-- Compress with [Squoosh](https://squoosh.app/) or [TinyPNG](https://tinypng.com/)
-- Target < 150KB per image for fast loading
-
 ---
 
-## ✏️ Content Customisation
+## 🙌 Credits
 
-All editable content is in `index.html`. Key items to update:
-
-| Item | Where |
-|------|-------|
-| Coach name | Hero title, About section → "Marcus Reid" |
-| Stats (200+ clients, 8+ years) | Hero stats section |
-| Services & descriptions | Services section — 3 cards |
-| Pricing amounts | Pricing section — 3 cards |
-| Testimonials | Testimonials section — 3 cards |
-| Contact details (email, phone, location) | Contact section |
-| Social media links | Contact section + Footer |
-| FAQ answers | FAQ section |
-| Footer tagline | Footer section |
-
----
-
-## 🎨 Colour Customisation
-
-All colours are CSS variables in `css/style.css` at the top:
-
-```css
-:root {
-  --red:        #C0152A;   /* Main brand red */
-  --red-dark:   #8B0F1E;   /* Darker red for borders/backgrounds */
-  --red-light:  #E8192F;   /* Lighter red for highlights */
-  --charcoal:   #1C1C1E;   /* Section backgrounds */
-  --black:      #0D0D0F;   /* Main background */
-  /* ... */
-}
-```
-
-Change `--red`, `--red-dark`, `--red-light` to switch the entire colour theme.
-
----
-
-## 📱 Responsive Breakpoints
-
-| Breakpoint | Layout |
-|-----------|--------|
-| ≥ 1024px (Desktop) | Full 2–3 column grids |
-| 768px–1023px (Tablet) | 2-column grids |
-| ≤ 768px (Mobile) | Single column, hamburger menu |
-| ≤ 480px (Small Mobile) | Full-width buttons, stacked stats |
-
----
-
-## 🚀 Deployment
-
-### Option A — Static Hosting (Free)
-- **Vercel:** Drag & drop the folder at [vercel.com](https://vercel.com)
-- **Netlify:** Drag & drop at [netlify.com](https://netlify.com)
-- **GitHub Pages:** Push to GitHub and enable Pages
-
-### Option B — Upgrade to Next.js
-Since you use Next.js, you can:
-1. Move `index.html` content into `app/page.tsx`
-2. Move `style.css` to `app/globals.css` or use Tailwind utilities
-3. Move `main.js` logic into client components
-4. Connect your Supabase backend for lead storage
-
----
-
-## ✅ Pre-Launch Checklist
-
-- [ ] Added coach photos to `/images/`
-- [ ] Updated coach name, bio, stats
-- [ ] Updated contact email, phone, location
-- [ ] Set up EmailJS and added credentials to `main.js`
-- [ ] Updated social media links
-- [ ] Updated pricing to real amounts
-- [ ] Updated testimonials with real client reviews
-- [ ] Added real transformation photos
-- [ ] Tested on mobile (iPhone & Android)
-- [ ] Tested contact form end-to-end
-
----
-
-Built for speed, conversion, and zero lag. 🔥
+Designed & developed by Marlon.
