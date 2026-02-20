@@ -6,7 +6,7 @@ A clean, fully responsive personal gym coaching landing page built with pure HTM
 
 ## 🔥 Live Demo
 
-> _Add your live site link here_
+https://apexcoach.vercel.app/
 
 ---
 
