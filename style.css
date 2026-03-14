@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
 
 /* ---------- CSS Variables ---------- */
 :root {
@@ -17,7 +17,7 @@
   --black:      #0D0D0F;
 
   --font-display: 'Bebas Neue', sans-serif;
-  --font-heading: 'Syne', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
   --font-body:    'DM Sans', sans-serif;
 
   --radius:   8px;
@@ -616,7 +616,7 @@ body::before {
   padding: 36px 28px;
   transition: var(--transition);
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   cursor: default;
 }
 .service-card::before {
@@ -696,7 +696,7 @@ body::before {
   background: var(--charcoal-2);
   border: 1px solid var(--ash);
   border-radius: var(--radius-lg);
-  overflow: visible;
+  overflow: hidden;
   transition: var(--transition);
 }
 .transform-card:hover { transform: translateY(-4px); border-color: var(--red-dark); }
@@ -825,7 +825,7 @@ body::before {
   flex-direction: column;
   transition: var(--transition);
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 }
 .pricing-card:hover { border-color: var(--red-dark); transform: translateY(-4px); }
 .pricing-card.popular {
