@@ -81,10 +81,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .section-title {
   font-family: var(--font-display);
   font-size: clamp(2.8rem, 6vw, 5rem);
-  line-height: 1;
+  line-height: 1.08;
   letter-spacing: 0.02em;
   color: var(--white);
   margin-bottom: 16px;
+  padding-bottom: 8px;
 }
 
 .section-title span { color: var(--red-light); }
@@ -267,6 +268,7 @@ body::before {
   letter-spacing: 0.05em;
   color: var(--white);
   transition: color var(--transition);
+  line-height: 1.1;
 }
 .mobile-menu a:hover { color: var(--red-light); }
 .mobile-close {
@@ -343,10 +345,11 @@ body::before {
 .hero-title {
   font-family: var(--font-display);
   font-size: clamp(3.5rem, 7vw, 6.5rem);
-  line-height: 0.95;
+  line-height: 1.05;
   letter-spacing: 0.02em;
   color: var(--white);
   margin-bottom: 24px;
+  padding-bottom: 8px;
 }
 .hero-title .accent { color: var(--red-light); }
 .hero-title .stroke {
@@ -380,7 +383,7 @@ body::before {
   font-family: var(--font-display);
   font-size: 2.4rem;
   color: var(--white);
-  line-height: 1;
+  line-height: 1.08;
 }
 .stat-num span { color: var(--red-light); }
 .stat-label {
@@ -438,7 +441,7 @@ body::before {
   font-family: var(--font-display);
   font-size: 2.2rem;
   color: var(--white);
-  line-height: 1;
+  line-height: 1.08;
 }
 .hero-badge-text {
   font-size: 0.75rem;
@@ -544,7 +547,7 @@ body::before {
   font-family: var(--font-display);
   font-size: 2.5rem;
   color: var(--white);
-  line-height: 1;
+  line-height: 1.08;
 }
 .about-exp-text {
   font-size: 0.62rem;
@@ -573,10 +576,10 @@ body::before {
   flex-shrink: 0;
 }
 .cert-text { font-size: 0.8rem; color: var(--off-white); font-weight: 500; }
-.cert-sub { font-size: 0.7rem; color: var(--muted); }
+.cert-sub { font-size: 0.7rem; color: var(--muted);}
 
 .about-content { padding-left: 20px; }
-.about-feature-list { margin: 32px 0; display: flex; flex-direction: column; gap: 16px; }
+.about-feature-list { margin: 32px 0; display: flex; flex-direction: column; gap: 16px;}
 .about-feature {
   display: flex;
   align-items: flex-start;
@@ -591,7 +594,7 @@ body::before {
   flex-shrink: 0;
   color: var(--red-light);
 }
-.feature-title { font-family: var(--font-heading); font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 3px; }
+.feature-title { font-family: var(--font-heading); font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 3px; padding-bottom: 4px; }
 .feature-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.5; }
 
 /* ===========================
@@ -613,7 +616,7 @@ body::before {
   padding: 36px 28px;
   transition: var(--transition);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   cursor: default;
 }
 .service-card::before {
@@ -656,6 +659,7 @@ body::before {
   font-size: 1.15rem;
   font-weight: 800;
   color: var(--white);
+  padding-bottom: 4px;
   margin-bottom: 10px;
 }
 .service-desc { font-size: 0.87rem; color: var(--muted); line-height: 1.65; margin-bottom: 24px; }
@@ -692,7 +696,7 @@ body::before {
   background: var(--charcoal-2);
   border: 1px solid var(--ash);
   border-radius: var(--radius-lg);
-  overflow: hidden;
+  overflow: visible;
   transition: var(--transition);
 }
 .transform-card:hover { transform: translateY(-4px); border-color: var(--red-dark); }
@@ -727,7 +731,7 @@ body::before {
 .transform-img-box .placeholder-icon { opacity: 0.15; }
 
 .transform-info { padding: 20px; }
-.transform-name { font-family: var(--font-heading); font-size: 0.95rem; font-weight: 700; color: var(--white); }
+.transform-name { font-family: var(--font-heading); font-size: 0.95rem; font-weight: 700; color: var(--white); padding-bottom: 4px; }
 .transform-detail { font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
 .transform-result {
   display: inline-block;
@@ -770,7 +774,7 @@ body::before {
   font-family: var(--font-display);
   font-size: 5rem;
   color: var(--red);
-  line-height: 0.6;
+  line-height: 0.8;
   opacity: 0.4;
   margin-bottom: 20px;
 }
@@ -797,7 +801,7 @@ body::before {
   color: var(--red-light);
   flex-shrink: 0;
 }
-.author-name { font-family: var(--font-heading); font-size: 0.9rem; font-weight: 700; color: var(--white); }
+.author-name { font-family: var(--font-heading); font-size: 0.9rem; font-weight: 700; color: var(--white); padding-bottom: 3px; }
 .author-tag { font-size: 0.75rem; color: var(--muted); }
 
 /* ===========================
@@ -821,7 +825,7 @@ body::before {
   flex-direction: column;
   transition: var(--transition);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 .pricing-card:hover { border-color: var(--red-dark); transform: translateY(-4px); }
 .pricing-card.popular {
@@ -852,6 +856,7 @@ body::before {
   text-transform: uppercase;
   color: var(--red-light);
   margin-bottom: 16px;
+  padding-bottom: 4px;
 }
 .pricing-amount {
   display: flex;
@@ -864,7 +869,7 @@ body::before {
   font-family: var(--font-display);
   font-size: 3.5rem;
   color: var(--white);
-  line-height: 1;
+  line-height: 1.08;
 }
 .price-period { font-size: 0.85rem; color: var(--muted); }
 .pricing-desc { font-size: 0.83rem; color: var(--muted); margin-bottom: 32px; line-height: 1.6; }
@@ -901,7 +906,7 @@ body::before {
   background: var(--charcoal);
   border: 1px solid var(--ash);
   border-radius: var(--radius);
-  overflow: hidden;
+  overflow: visible;
   transition: border-color var(--transition);
 }
 .faq-item.open { border-color: var(--red-dark); }
@@ -921,6 +926,7 @@ body::before {
   color: var(--white);
   flex: 1;
   padding-right: 16px;
+  padding-bottom: 4px;
 }
 .faq-icon {
   width: 28px; height: 28px;
@@ -997,6 +1003,7 @@ body::before {
   font-weight: 800;
   color: var(--white);
   margin-bottom: 6px;
+  padding-bottom: 4px;
 }
 .form-sub { font-size: 0.85rem; color: var(--muted); margin-bottom: 32px; }
 
