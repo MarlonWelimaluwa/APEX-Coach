@@ -95,6 +95,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--muted);
   max-width: 520px;
   line-height: 1.7;
+  text-align: center;
+  margin: 0 auto;
 }
 
 /* ---------- Buttons ---------- */
@@ -675,6 +677,10 @@ body::before {
    =========================== */
 .transformations { background: var(--charcoal); }
 .transformations-header { margin-bottom: 60px; }
+.transformations-header p {
+  margin-left: 0;
+  text-align: left;
+}
 
 .transform-grid {
   display: grid;
@@ -743,6 +749,7 @@ body::before {
    =========================== */
 .testimonials { background: var(--black); }
 .testimonials-header { text-align: center; margin-bottom: 60px; }
+
 
 .testimonials-grid {
   display: grid;
